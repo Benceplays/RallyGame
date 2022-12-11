@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0df282a5-7909-450c-8b56-65028af193e4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/Fonts/Rally Blade.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sound/IngameMusic.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sound/IngameMusic.ogg.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sound/[Majomparade]JetBrains ReSharper Ultimate v2019.3.3.torrent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Sound/rally_blade.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/save/options.json" beforeDir="false" afterPath="$PROJECT_DIR$/save/options.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/Game.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/Game.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/Menu.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/Menu.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/Options.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/Options.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/Timeout.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/Timeout.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Bus_stop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Bus_stop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/ConfigBody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ConfigBody.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Options.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Options.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/spikestrip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/spikestrip.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2I89CpY9xx1ZE6dp5YH2RlhKLFl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0df282a5-7909-450c-8b56-65028af193e4" name="Changes" comment="" />
+      <created>1669552220601</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669552220601</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

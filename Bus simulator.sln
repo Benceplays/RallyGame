@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bus simulator", "Bus simulator.csproj", "{1B699C95-7369-4924-981F-D9F2415F6C5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B699C95-7369-4924-981F-D9F2415F6C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B699C95-7369-4924-981F-D9F2415F6C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B699C95-7369-4924-981F-D9F2415F6C5D}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{1B699C95-7369-4924-981F-D9F2415F6C5D}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{1B699C95-7369-4924-981F-D9F2415F6C5D}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{1B699C95-7369-4924-981F-D9F2415F6C5D}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6BCCB22-3790-42BA-B355-53F72C15CCD4}
+	EndGlobalSection
+EndGlobal
