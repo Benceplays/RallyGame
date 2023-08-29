@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Cars : KinematicBody2D
+public partial class Cars : CharacterBody2D
 {
     [Export] private float _steeringAngle = 15.0f;
     [Export] private int _enginePoser = 400;
@@ -24,10 +24,10 @@ public class Cars : KinematicBody2D
     private float _tractionFast = 0.1f;
     private float _tractionSlow = 0.7f;
     public AllVariable allVariable = new AllVariable();
-    public Sprite carsprite;
-    public TextureProgress nitrousbar;
-    public Sprite secondcarsprite;
-    public TextureProgress secondnitrousbar;
+    public Sprite2D carsprite;
+    public TextureProgressBar nitrousbar;
+    public Sprite2D secondcarsprite;
+    public TextureProgressBar secondnitrousbar;
     public int first;
 	public int second;
     public int shake = 1;
@@ -38,9 +38,9 @@ public class Cars : KinematicBody2D
 
     public override void _Ready()
     {
-        carsprite = GetNode("/root/Game/Car/KinematicBody2D/Sprite") as Sprite; 
-        nitrousbar = GetNode("/root/Game/Car/HUD/NitrousBar") as TextureProgress; 
-        camera = GetNode("/root/Game/Car/KinematicBody2D/Camera2D") as Camera2D;
+        carsprite = GetNode("/root/Game/Car/CharacterBody2D/Sprite2D") as Sprite2D; 
+        nitrousbar = GetNode("/root/Game/Car/HUD/NitrousBar") as TextureProgressBar; 
+        camera = GetNode("/root/Game/Car/CharacterBody2D/Camera2D") as Camera2D;
     }
 
 
@@ -73,20 +73,20 @@ public class Cars : KinematicBody2D
         }
 
         float turn = Input.GetActionStrength("right") - Input.GetActionStrength("left");
-        _steerAngle = turn * Mathf.Deg2Rad(_steeringAngle);
+        _steerAngle = turn * Mathf.DegToRad(_steeringAngle);
 
         if (Input.IsActionPressed("forward"))
         {
-            _acceleration = Transform.x * _enginePoser;
+            _acceleration = Transform3D.x * _enginePoser;
         }
         if (Input.IsActionPressed("backward"))
         {
-            _acceleration = Transform.x * _breaking;
+            _acceleration = Transform3D.x * _breaking;
         }
 
         if (Input.IsActionPressed("nitrous") && allVariable.nitrous >= 1)
 		{
-				carsprite.Texture = (Texture)ResourceLoader.Load("res://assets/Images/nitrouscar.png");
+				carsprite.Texture2D = (Texture2D)ResourceLoader.Load("res://assets/Images/nitrouscar.png");
 				allVariable.nitrous--;
 				nitrousbar.Value = allVariable.nitrous;
 				allVariable.speed = 1500;
@@ -97,7 +97,7 @@ public class Cars : KinematicBody2D
 		}
 		else
 		{
-			carsprite.Texture = (Texture)ResourceLoader.Load("res://assets/Images/car.png");
+			carsprite.Texture2D = (Texture2D)ResourceLoader.Load("res://assets/Images/car.png");
             //allVariable.speed = 400;
 		}
     }
@@ -105,8 +105,8 @@ public class Cars : KinematicBody2D
 
     private void CalculateSteering(float delta)
     {
-        Vector2 rearWheel = Position - Transform.x * _wheelBase / 4.0f;
-        Vector2 frontWheel = Position + Transform.x * _wheelBase / 4.0f;
+        Vector2 rearWheel = Position - Transform3D.x * _wheelBase / 4.0f;
+        Vector2 frontWheel = Position + Transform3D.x * _wheelBase / 4.0f;
         rearWheel += _velocity * delta;
         frontWheel += _velocity.Rotated(_steerAngle) * delta;
         Vector2 newHeading = (frontWheel - rearWheel).Normalized();
@@ -120,7 +120,7 @@ public class Cars : KinematicBody2D
         if (d < 0)
             _velocity = -newHeading * Mathf.Min(_velocity.Length(), _maxSpeedReverse);
         else if (d > 0)
-            _velocity = _velocity.LinearInterpolate(newHeading * _velocity.Length(), traction);
+            _velocity = _velocity.Lerp(newHeading * _velocity.Length(), traction);
 
         Rotation = newHeading.Angle();
     }

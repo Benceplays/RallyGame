@@ -1,23 +1,23 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/Images/Background.png" type="Texture" id=1]
-[ext_resource path="res://assets/Images/exitbutton.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/Background.png" type="Texture2D" id=1]
+[ext_resource path="res://assets/Images/exitbutton.png" type="Texture2D" id=2]
 [ext_resource path="res://scripts/Timeout.cs" type="Script" id=3]
-[ext_resource path="res://assets/Fonts/Adventuro.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/Fonts/Adventuro.ttf" type="FontFile" id=4]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="FontFile" id=2]
 size = 40
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="FontFile" id=3]
 size = 35
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="FontFile" id=4]
 size = 40
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="FontFile" id=5]
 size = 45
 font_data = ExtResource( 4 )
 
@@ -25,47 +25,47 @@ font_data = ExtResource( 4 )
 script = ExtResource( 3 )
 
 [node name="Earn" type="Label" parent="."]
-margin_left = 373.0
-margin_top = 174.0
-margin_right = 631.0
-margin_bottom = 219.0
-custom_fonts/font = SubResource( 2 )
+offset_left = 373.0
+offset_top = 174.0
+offset_right = 631.0
+offset_bottom = 219.0
+theme_override_fonts/font = SubResource( 2 )
 
 [node name="personal_record" type="Label" parent="."]
-margin_left = 368.0
-margin_top = 240.0
-margin_right = 628.0
-margin_bottom = 283.0
-custom_fonts/font = SubResource( 3 )
+offset_left = 368.0
+offset_top = 240.0
+offset_right = 628.0
+offset_bottom = 283.0
+theme_override_fonts/font = SubResource( 3 )
 
 [node name="All_in_one" type="TextureButton" parent="."]
-margin_left = 412.0
-margin_top = 485.0
-margin_right = 650.0
-margin_bottom = 569.0
+offset_left = 412.0
+offset_top = 485.0
+offset_right = 650.0
+offset_bottom = 569.0
 
-[node name="Sprite" type="Sprite" parent="All_in_one"]
+[node name="Sprite2D" type="Sprite2D" parent="All_in_one"]
 position = Vector2( 43, 40 )
 scale = Vector2( 0.646552, 0.684211 )
 texture = ExtResource( 2 )
 
-[node name="gotomenu" type="Label" parent="All_in_one/Sprite"]
-margin_left = 69.6
-margin_top = -23.3846
-margin_right = 281.6
-margin_bottom = 25.6154
-custom_fonts/font = SubResource( 4 )
+[node name="gotomenu" type="Label" parent="All_in_one/Sprite2D"]
+offset_left = 69.6
+offset_top = -23.3846
+offset_right = 281.6
+offset_bottom = 25.6154
+theme_override_fonts/font = SubResource( 4 )
 text = "Back to menu"
 
 [node name="endlabel" type="Label" parent="."]
-margin_left = 219.0
-margin_top = 354.0
-margin_right = 322.0
-margin_bottom = 409.0
-custom_fonts/font = SubResource( 5 )
+offset_left = 219.0
+offset_top = 354.0
+offset_right = 322.0
+offset_bottom = 409.0
+theme_override_fonts/font = SubResource( 5 )
 align = 1
 
-[node name="brokenbackground" type="Sprite" parent="."]
+[node name="brokenbackground" type="Sprite2D" parent="."]
 position = Vector2( 512.25, 300.5 )
 scale = Vector2( 0.533073, 0.556481 )
 z_index = -32

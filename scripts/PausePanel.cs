@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class PausePanel : Panel
+public partial class PausePanel : Panel
 {
     
     public Panel pausepanel;

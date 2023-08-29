@@ -6,7 +6,7 @@ using Newtonsoft.Json.Linq;
 using System.IO;
 using File = System.IO.File;
 
-public class Options : Node2D
+public partial class Options : Node2D
 {
     public HSlider MainVolume;
     public HSlider MusicVolume;
@@ -135,20 +135,20 @@ public class Options : Node2D
         {
             options.WriteTo(writer);
         }
-        GetTree().ChangeScene("res://scenes/Menu.tscn");
+        GetTree().ChangeSceneToFile("res://scenes/Menu.tscn");
     }
 
     public override void _Input(InputEvent esemeny)
     {
         if (Input.IsActionJustPressed("back"))
         {
-            GetTree().ChangeScene("res://scenes/Menu.tscn");
+            GetTree().ChangeSceneToFile("res://scenes/Menu.tscn");
         }
     }
     public void _on_BackButton_pressed()
     {
         click.Play();
-        GetTree().ChangeScene("res://scenes/Menu.tscn");
+        GetTree().ChangeSceneToFile("res://scenes/Menu.tscn");
     }
 
     public override void _Process(float delta)

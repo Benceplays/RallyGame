@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Map : Node2D
+public partial class Map : Node2D
 {
     // Declare member variables here. Examples:
     // private int a = 2;
@@ -13,10 +13,10 @@ public class Map : Node2D
     public TileMap tileMap;
     public TileSet tileSet;
     public Node2D bus_StopN;
-    public Sprite red_circle;
+    public Sprite2D red_circle;
     public Area2D bus_stop;
     public Node2D car_node;
-    public KinematicBody2D car;
+    public CharacterBody2D car;
     public int tile_width = 64;
     public int tile_height = 64;
     public float multiplier = 8.28125f;
@@ -27,7 +27,7 @@ public class Map : Node2D
     [Export] public int nitrous_chance = 95;
     public Vector2 position;
 	public Area2D finish;
-	public Sprite circle;
+	public Sprite2D circle;
     public AllVariable allVariable;
     public enum dirtForm
     {
@@ -57,11 +57,11 @@ public class Map : Node2D
         bus_StopN = GetNode("/root/Game/Bus_stop") as Node2D;
         bus_stop = bus_StopN.GetNode("Area2D") as Area2D;
         car_node = GetNode("/root/Game/Car") as Node2D;
-        car = car_node.GetNode("KinematicBody2D") as KinematicBody2D;
+        car = car_node.GetNode("CharacterBody2D") as CharacterBody2D;
         //GD.Print($"BUS_STOP1{bus_stop.Position.x}");
         //TODO Mi a gyászért ír totális faszságot a getpos egyik helyen 186 a másikon már 286 és nem lehet állítani a poziciojat
         //TODO Ahol a dirt-t rakjuk le ott egy 1/(előre beállított eséllyel) lerak egy tárgyat(nitró,coin), egybe nem lehet mindkettő
-        red_circle = bus_StopN.GetNode("Sprite") as Sprite;
+        red_circle = bus_StopN.GetNode("Sprite2D") as Sprite2D;
         
         tileMap = GetNode("TileMap") as TileMap;
         tileSet = tileMap.TileSet;
@@ -110,7 +110,7 @@ public class Map : Node2D
         //GD.Print(mapLength);
         position = new Vector2(-((allVariable.maplength * 8.28125f) *64), 0);
 		finish = GetNode("/root/Game/Bus_stop/Area2D") as Area2D;
-		circle = GetNode("/root/Game/Bus_stop/Sprite") as Sprite;
+		circle = GetNode("/root/Game/Bus_stop/Sprite2D") as Sprite2D;
 		finish.Position = position;
 		circle.Position = position;
     }
@@ -317,12 +317,12 @@ public class Map : Node2D
         //GD.Print("TILE: " + getTileByPos(car));
     }
 
-    public int getTileByPos(KinematicBody2D body){
+    public int getTileByPos(CharacterBody2D body){
         int tile_id;
         Vector2 car_pos = new Vector2(car.Position.x,car.Position.y);
 
        //Vector2 tile_pos = new Vector2((car_pos.x/(tile_width*multiplier)),car_pos.y/((tile_height+1)*multiplier));
-        Vector2 tile_pos = tileMap.WorldToMap(car.Position/multiplier);
+        Vector2 tile_pos = tileMap.LocalToMap(car.Position/multiplier);
         //GD.Print(tile_pos);
         //GD.Print(tile_pos);
         int tile = tileMap.GetCell((int)tile_pos.x,(int)tile_pos.y);

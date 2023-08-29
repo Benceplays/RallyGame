@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/Images/nitrous.png" type="Texture" id=1]
+[ext_resource path="res://assets/Images/nitrous.png" type="Texture2D" id=1]
 [ext_resource path="res://scripts/Nitrous.cs" type="Script" id=2]
 
 [node name="Nitrous" type="Node2D"]
@@ -14,9 +14,9 @@ __meta__ = {
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Nitrous"]
 position = Vector2( -40, -41 )
-polygon = PoolVector2Array( 24, 35, 42, 64, 45, 63, 46, 63, 48, 62, 49, 61, 50, 60, 51, 59, 52, 58, 41.0985, 40.2851, 36, 32, 39, 30, 41, 29, 42, 28, 45, 27, 47, 28, 51, 28, 53, 28, 56, 28, 57, 26, 59, 23, 56, 25, 54, 26, 52, 26, 50, 25, 47, 24, 44, 23, 44, 21, 42, 20, 38, 20, 36, 20, 36, 19, 35, 18, 32, 17, 31, 18, 29, 19, 27, 21, 24, 21, 22, 22, 21, 24, 21, 27, 23, 29, 25, 29, 25, 31, 24, 34 )
+polygon = PackedVector2Array( 24, 35, 42, 64, 45, 63, 46, 63, 48, 62, 49, 61, 50, 60, 51, 59, 52, 58, 41.0985, 40.2851, 36, 32, 39, 30, 41, 29, 42, 28, 45, 27, 47, 28, 51, 28, 53, 28, 56, 28, 57, 26, 59, 23, 56, 25, 54, 26, 52, 26, 50, 25, 47, 24, 44, 23, 44, 21, 42, 20, 38, 20, 36, 20, 36, 19, 35, 18, 32, 17, 31, 18, 29, 19, 27, 21, 24, 21, 22, 22, 21, 24, 21, 27, 23, 29, 25, 29, 25, 31, 24, 34 )
 
-[node name="Sprite" type="Sprite" parent="Nitrous"]
+[node name="Sprite2D" type="Sprite2D" parent="Nitrous"]
 position = Vector2( 3.8147e-06, 3.8147e-06 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 1 )

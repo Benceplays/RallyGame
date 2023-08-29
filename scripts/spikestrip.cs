@@ -5,10 +5,10 @@ using Newtonsoft.Json.Linq;
 using System.IO;
 using File = System.IO.File;
 
-public class spikestrip : Node2D
+public partial class spikestrip : Node2D
 {
     public AllVariable allVariable;
-    public TextureProgress hpbar;
+    public TextureProgressBar hpbar;
     public Camera2D camera;
     public Timer maintimer;
     public int shake = 1;
@@ -19,13 +19,13 @@ public class spikestrip : Node2D
     public float time;
     public int max_sec;
     public Node2D car;
-    public KinematicBody2D car_body;
+    public CharacterBody2D car_body;
 
     public override void _Ready()
     {
         allVariable = new AllVariable();
-        hpbar = GetNode("/root/Game/Car/HUD/HpBar") as TextureProgress;
-        camera = GetNode("/root/Game/Car/KinematicBody2D/Camera2D") as Camera2D;
+        hpbar = GetNode("/root/Game/Car/HUD/HpBar") as TextureProgressBar;
+        camera = GetNode("/root/Game/Car/CharacterBody2D/Camera2D") as Camera2D;
         maintimer = GetNode("/root/Game/Timer") as Timer;
 
 
@@ -72,7 +72,7 @@ public class spikestrip : Node2D
             options.WriteTo(writer);
         }
 
-        GetTree().ChangeScene("res://scenes/Timeout.tscn");
+        GetTree().ChangeSceneToFile("res://scenes/Timeout.tscn");
     }
 
     public void Vibration()

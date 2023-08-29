@@ -7,7 +7,7 @@ using System.IO;
 using static System.Net.Mime.MediaTypeNames;
 using File = System.IO.File;
 
-public class Game : Node2D
+public partial class Game : Node2D
 {
 	[Export] public int speed = 5;
 
@@ -20,12 +20,12 @@ public class Game : Node2D
 	public Node2D car;
 	public Timer timer;
 	public Label time;
-	public TextureProgress nitrousbar;
+	public TextureProgressBar nitrousbar;
 	public TimeSpan t;
 	public AllVariable allVariable;
 	public Random rnd;
 	public Camera2D camera;
-	public Sprite carsprite;
+	public Sprite2D carsprite;
 	public int first;
 	public int second;
 	public int shake = 1;
@@ -46,10 +46,10 @@ public class Game : Node2D
 		busstop = GetNode("/root/Game/Bus_stop/Area2D") as Area2D;
 		timer = GetNode("Timer") as Timer;
 		time = GetNode("Car/HUD/Time") as Label;
-		nitrousbar = GetNode("Car/HUD/NitrousBar") as TextureProgress;
-		camera = GetNode("/root/Game/Car/KinematicBody2D/Camera2D") as Camera2D;
+		nitrousbar = GetNode("Car/HUD/NitrousBar") as TextureProgressBar;
+		camera = GetNode("/root/Game/Car/CharacterBody2D/Camera2D") as Camera2D;
 		pausepanel = GetNode("Car/HUD/PausePanel") as Panel;
-		carsprite = GetNode("/root/Game/Car/KinematicBody2D/Sprite") as Sprite;
+		carsprite = GetNode("/root/Game/Car/CharacterBody2D/Sprite2D") as Sprite2D;
 
 		allVariable.hp = 100;
 		allVariable.nitrous = 0;
@@ -100,7 +100,7 @@ public class Game : Node2D
 	{
 		if (Input.IsActionPressed("nitrous") && allVariable.nitrous >= 1)
 		{
-				carsprite.Texture = (Texture)ResourceLoader.Load("res://assets/Images/nitrouscar.png");
+				carsprite.Texture2D = (Texture2D)ResourceLoader.Load("res://assets/Images/nitrouscar.png");
 				allVariable.nitrous--;
 				nitrousbar.Value = allVariable.nitrous;
 				allVariable.speed = 1500;
@@ -112,14 +112,14 @@ public class Game : Node2D
 		else
 		{
 			//allVariable.speed = 400;
-			carsprite.Texture = (Texture)ResourceLoader.Load("res://assets/Images/car.png");
+			carsprite.Texture2D = (Texture2D)ResourceLoader.Load("res://assets/Images/car.png");
 		}
 		
 	}
 	public void _on_quit_pressed()
 	{
         GetTree().Paused = false;
-		GetTree().ChangeScene("res://scenes/Menu.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/Menu.tscn");
 	}
 
     public void _on_return_pressed()

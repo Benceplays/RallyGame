@@ -4,7 +4,7 @@ using System;
 using System.IO;
 using File = System.IO.File;
 
-public class Timeout : Node2D
+public partial class Timeout : Node2D
 {
     public Label timelabel;
     public Label personal_record;
@@ -26,7 +26,7 @@ public class Timeout : Node2D
     }
     public void _on_BackToMenu_pressed() 
     {
-        GetTree().ChangeScene("res://scenes/Menu.tscn");
+        GetTree().ChangeSceneToFile("res://scenes/Menu.tscn");
     }
 
 

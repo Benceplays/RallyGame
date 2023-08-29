@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/MainMusic.ogg-11db9f182772693ef18f04bf857ac5c3.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b3qm0kornaif1"
+path="res://.godot/imported/MainMusic.ogg-11db9f182772693ef18f04bf857ac5c3.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/Sound/MainMusic.ogg"
-dest_files=[ "res://.import/MainMusic.ogg-11db9f182772693ef18f04bf857ac5c3.oggstr" ]
+dest_files=["res://.godot/imported/MainMusic.ogg-11db9f182772693ef18f04bf857ac5c3.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

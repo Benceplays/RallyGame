@@ -5,10 +5,10 @@ using Newtonsoft.Json.Linq;
 using System.IO;
 using File = System.IO.File;
 
-public class Bus_stop : Node2D
+public partial class Bus_stop : Node2D
 {
 	public Node2D car;
-	public KinematicBody2D car_body;
+	public CharacterBody2D car_body;
 	public Random rng;
 	public Timer timer;
 	public int t;
@@ -25,7 +25,7 @@ public class Bus_stop : Node2D
 		//GD.Print(allVariable.maplength);
 		car = GetNode("/root/Game/Car") as Node2D;
 		timer = GetNode("/root/Game/Timer") as Timer;
-		car_body = car.GetNode("KinematicBody2D") as KinematicBody2D;
+		car_body = car.GetNode("CharacterBody2D") as CharacterBody2D;
 	}
 	public void _on_Area2D_body_entered(object body)
 	{	
@@ -55,7 +55,7 @@ public class Bus_stop : Node2D
 				options.WriteTo(writer);
 			}
 
-		GetTree().ChangeScene("res://scenes/Timeout.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/Timeout.tscn");
 	}
 
 	public override void _Process(float delta)

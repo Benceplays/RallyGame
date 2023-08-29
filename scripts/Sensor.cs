@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Sensor : Node2D
+public partial class Sensor : Node2D
 {
     public string type;
     private AllVariable allVariable = new AllVariable();
@@ -16,13 +16,13 @@ public class Sensor : Node2D
     }
 
     public void _on_Area2D_body_entered(object body){
-        if (body is KinematicBody2D){
+        if (body is CharacterBody2D){
             allVariable.speed = 800;
         }
     }
 
     public void _on_Area2D_body_exited(object body){
-        if (body is KinematicBody2D){
+        if (body is CharacterBody2D){
             allVariable.speed = 100;
             GD.Print(allVariable.speed);
         }

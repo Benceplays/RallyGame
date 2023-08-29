@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/EngineSound.ogg-4e662a54a150675a74e30a3e398de7ca.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bhg1d5dc80act"
+path="res://.godot/imported/EngineSound.ogg-4e662a54a150675a74e30a3e398de7ca.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/Sound/EngineSound.ogg"
-dest_files=[ "res://.import/EngineSound.ogg-4e662a54a150675a74e30a3e398de7ca.oggstr" ]
+dest_files=["res://.godot/imported/EngineSound.ogg-4e662a54a150675a74e30a3e398de7ca.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

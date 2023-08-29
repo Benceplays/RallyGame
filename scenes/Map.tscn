@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/Images/dirt.jpg" type="Texture" id=1]
-[ext_resource path="res://assets/Images/grass.png" type="Texture" id=2]
+[ext_resource path="res://assets/Images/dirt.jpg" type="Texture2D" id=1]
+[ext_resource path="res://assets/Images/grass.png" type="Texture2D" id=2]
 [ext_resource path="res://scripts/Map.cs" type="Script" id=3]
 [ext_resource path="res://scenes/Sensor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/SpikeStrip.tscn" type="PackedScene" id=5]

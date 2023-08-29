@@ -1,6 +1,6 @@
 using System;
 using Godot;
-public class AllVariable
+public partial class AllVariable
 {
     private static int nitrovalue;
     private static int speedvalue = 400;

@@ -6,7 +6,7 @@ using System.Runtime.Serialization.Json;
 using System.IO;
 using File = System.IO.File;
 
-public class Menu : Node2D
+public partial class Menu : Node2D
 {
 	public AudioStreamPlayer2D MainMusic;
 	public AudioStreamPlayer2D click;
@@ -50,19 +50,19 @@ public class Menu : Node2D
 	public void _on_PlayButton_pressed()
 	{
 		click.Play();
-		GetTree().ChangeScene("res://scenes/Game.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/Game.tscn");
 	}
 
 	public void _on_PlayButton2_pressed()
 	{
 		click.Play();
-		GetTree().ChangeScene("res://scenes/GameMultiplayer.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/GameMultiplayer.tscn");
 	}
 
 	public void _on_OptionsButton_pressed()
 	{
 		click.Play();
-		GetTree().ChangeScene("res://scenes/Options.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/Options.tscn");
 	}
 	public void _on_ExitButton_pressed()
 	{
